@@ -23,6 +23,4 @@ self.sketchpadView.horizontalPage = 5;
 self.sketchpadView.verticalPage = 5;
 //弹出显示
 [self.sketchpadView showWithID:123];
-
 ```
-
