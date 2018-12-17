@@ -2,8 +2,8 @@
 //  MWSSketchpadView.h
 //
 //  Created by 马文帅 on 2018/12/15.
-//  Copyright © 2017年 mawenshuai. All rights reserved.
-//
+//  Copyright © 2018年 mawenshuai. All rights reserved.
+//  https://github.com/mws100/MWSSketchpadView
 
 #import <UIKit/UIKit.h>
 

@@ -2,7 +2,7 @@
 //  MWSSketchpadView.m
 //
 //  Created by 马文帅 on 2018/12/15.
-//  Copyright © 2017年 mawenshuai. All rights reserved.
+//  Copyright © 2018年 mawenshuai. All rights reserved.
 //
 
 #import "MWSSketchpadView.h"
@@ -11,8 +11,8 @@
 #define MWSSketchpadPath [[NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES) lastObject] stringByAppendingPathComponent:@"MWSSketchpadView.data"]
 #define MWSSketchpadImagePath(imgName) [@"MWSSketchpadView.bundle" stringByAppendingPathComponent:imgName]
 
-static NSString * const allPathsArray = @"allPathsArray";
-static NSString * const undoPathsArray = @"undoPathsArray";
+static NSString *const allPathsArray = @"allPathsArray";
+static NSString *const undoPathsArray = @"undoPathsArray";
 
 static const CGFloat animationDuration = 0.25;
 
