@@ -13,10 +13,10 @@
 		C21937EC21C7734E003235FA /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C21937EB21C7734E003235FA /* Assets.xcassets */; };
 		C21937EF21C7734E003235FA /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C21937ED21C7734E003235FA /* LaunchScreen.storyboard */; };
 		C21937F221C7734E003235FA /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = C21937F121C7734E003235FA /* main.m */; };
-		C219381621C77E0A003235FA /* MWSSketchpadView.xib in Resources */ = {isa = PBXBuildFile; fileRef = C219381021C77E0A003235FA /* MWSSketchpadView.xib */; };
-		C219381721C77E0A003235FA /* MWSSketchpad.bundle in Resources */ = {isa = PBXBuildFile; fileRef = C219381121C77E0A003235FA /* MWSSketchpad.bundle */; };
-		C219381821C77E0A003235FA /* MWSSketchpadView.m in Sources */ = {isa = PBXBuildFile; fileRef = C219381321C77E0A003235FA /* MWSSketchpadView.m */; };
-		C219381921C77E0A003235FA /* MWSSketchpadScrollView.m in Sources */ = {isa = PBXBuildFile; fileRef = C219381421C77E0A003235FA /* MWSSketchpadScrollView.m */; };
+		C219384321C7A0E1003235FA /* MWSSketchpadView.xib in Resources */ = {isa = PBXBuildFile; fileRef = C219383D21C7A0E1003235FA /* MWSSketchpadView.xib */; };
+		C219384521C7A0E1003235FA /* MWSSketchpadView.m in Sources */ = {isa = PBXBuildFile; fileRef = C219384021C7A0E1003235FA /* MWSSketchpadView.m */; };
+		C219384621C7A0E1003235FA /* MWSSketchpadScrollView.m in Sources */ = {isa = PBXBuildFile; fileRef = C219384121C7A0E1003235FA /* MWSSketchpadScrollView.m */; };
+		C219384821C7A616003235FA /* MWSSketchpadView.bundle in Resources */ = {isa = PBXBuildFile; fileRef = C219384721C7A616003235FA /* MWSSketchpadView.bundle */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -30,12 +30,12 @@
 		C21937EE21C7734E003235FA /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		C21937F021C7734E003235FA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		C21937F121C7734E003235FA /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
-		C219381021C77E0A003235FA /* MWSSketchpadView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MWSSketchpadView.xib; sourceTree = "<group>"; };
-		C219381121C77E0A003235FA /* MWSSketchpad.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = MWSSketchpad.bundle; sourceTree = "<group>"; };
-		C219381221C77E0A003235FA /* MWSSketchpadScrollView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MWSSketchpadScrollView.h; sourceTree = "<group>"; };
-		C219381321C77E0A003235FA /* MWSSketchpadView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MWSSketchpadView.m; sourceTree = "<group>"; };
-		C219381421C77E0A003235FA /* MWSSketchpadScrollView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MWSSketchpadScrollView.m; sourceTree = "<group>"; };
-		C219381521C77E0A003235FA /* MWSSketchpadView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MWSSketchpadView.h; sourceTree = "<group>"; };
+		C219383D21C7A0E1003235FA /* MWSSketchpadView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MWSSketchpadView.xib; sourceTree = "<group>"; };
+		C219383F21C7A0E1003235FA /* MWSSketchpadScrollView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MWSSketchpadScrollView.h; sourceTree = "<group>"; };
+		C219384021C7A0E1003235FA /* MWSSketchpadView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MWSSketchpadView.m; sourceTree = "<group>"; };
+		C219384121C7A0E1003235FA /* MWSSketchpadScrollView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MWSSketchpadScrollView.m; sourceTree = "<group>"; };
+		C219384221C7A0E1003235FA /* MWSSketchpadView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MWSSketchpadView.h; sourceTree = "<group>"; };
+		C219384721C7A616003235FA /* MWSSketchpadView.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = MWSSketchpadView.bundle; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -68,7 +68,7 @@
 		C21937E121C7734C003235FA /* MWSSketchpadExample */ = {
 			isa = PBXGroup;
 			children = (
-				C219380F21C77E0A003235FA /* MWSSketchpad */,
+				C219383C21C7A0E1003235FA /* MWSSketchpadView */,
 				C21937E221C7734C003235FA /* AppDelegate.h */,
 				C21937E321C7734C003235FA /* AppDelegate.m */,
 				C21937E521C7734C003235FA /* ViewController.h */,
@@ -82,18 +82,18 @@
 			path = MWSSketchpadExample;
 			sourceTree = "<group>";
 		};
-		C219380F21C77E0A003235FA /* MWSSketchpad */ = {
+		C219383C21C7A0E1003235FA /* MWSSketchpadView */ = {
 			isa = PBXGroup;
 			children = (
-				C219381121C77E0A003235FA /* MWSSketchpad.bundle */,
-				C219381221C77E0A003235FA /* MWSSketchpadScrollView.h */,
-				C219381421C77E0A003235FA /* MWSSketchpadScrollView.m */,
-				C219381521C77E0A003235FA /* MWSSketchpadView.h */,
-				C219381321C77E0A003235FA /* MWSSketchpadView.m */,
-				C219381021C77E0A003235FA /* MWSSketchpadView.xib */,
+				C219384721C7A616003235FA /* MWSSketchpadView.bundle */,
+				C219383F21C7A0E1003235FA /* MWSSketchpadScrollView.h */,
+				C219384121C7A0E1003235FA /* MWSSketchpadScrollView.m */,
+				C219384221C7A0E1003235FA /* MWSSketchpadView.h */,
+				C219384021C7A0E1003235FA /* MWSSketchpadView.m */,
+				C219383D21C7A0E1003235FA /* MWSSketchpadView.xib */,
 			);
-			name = MWSSketchpad;
-			path = ../../MWSSketchpad;
+			name = MWSSketchpadView;
+			path = ../../MWSSketchpadView;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -153,10 +153,10 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				C219381721C77E0A003235FA /* MWSSketchpad.bundle in Resources */,
 				C21937EF21C7734E003235FA /* LaunchScreen.storyboard in Resources */,
 				C21937EC21C7734E003235FA /* Assets.xcassets in Resources */,
-				C219381621C77E0A003235FA /* MWSSketchpadView.xib in Resources */,
+				C219384821C7A616003235FA /* MWSSketchpadView.bundle in Resources */,
+				C219384321C7A0E1003235FA /* MWSSketchpadView.xib in Resources */,
 				C21937EA21C7734C003235FA /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -168,10 +168,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				C219381921C77E0A003235FA /* MWSSketchpadScrollView.m in Sources */,
+				C219384621C7A0E1003235FA /* MWSSketchpadScrollView.m in Sources */,
 				C21937E721C7734C003235FA /* ViewController.m in Sources */,
 				C21937F221C7734E003235FA /* main.m in Sources */,
-				C219381821C77E0A003235FA /* MWSSketchpadView.m in Sources */,
+				C219384521C7A0E1003235FA /* MWSSketchpadView.m in Sources */,
 				C21937E421C7734C003235FA /* AppDelegate.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

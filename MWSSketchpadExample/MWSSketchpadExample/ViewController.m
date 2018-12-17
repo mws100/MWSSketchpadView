@@ -25,6 +25,10 @@
 - (void)touchesBegan:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event {
     [super touchesBegan:touches withEvent:event];
     [[MWSSketchpadView shareInstance] showWithID:234];
+    
+    [MWSSketchpadView shareInstance].horizontalPage = 5;
+    [MWSSketchpadView shareInstance].verticalPage = 5;
+
 }
 
 @end

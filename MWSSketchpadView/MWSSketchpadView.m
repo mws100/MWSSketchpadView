@@ -8,8 +8,8 @@
 #import "MWSSketchpadView.h"
 #import "MWSSketchpadScrollView.h"
 
-#define MWSSketchpadPath [[NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES) lastObject] stringByAppendingPathComponent:@"sketchpad.data"]
-#define MWSSketchpadImagePath(imgName) [@"MWSSketchpad.bundle" stringByAppendingPathComponent:imgName]
+#define MWSSketchpadPath [[NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES) lastObject] stringByAppendingPathComponent:@"MWSSketchpadView.data"]
+#define MWSSketchpadImagePath(imgName) [@"MWSSketchpadView.bundle" stringByAppendingPathComponent:imgName]
 
 static NSString * const allPathsArray = @"allPathsArray";
 static NSString * const undoPathsArray = @"undoPathsArray";
