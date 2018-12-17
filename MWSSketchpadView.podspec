@@ -16,7 +16,7 @@ Pod::Spec.new do |s|
   #
 
   s.name         = "MWSSketchpadView"
-  s.version      = "0.0.1"
+  s.version      = "0.0.2"
   s.summary      = "封装题库类app的草稿纸功能"
 
   # This description is used to generate tags and improve search results.
@@ -25,9 +25,10 @@ Pod::Spec.new do |s|
   #   * Write the description between the DESC delimiters below.
   #   * Finally, don't worry about the indent, CocoaPods strips it!
   s.description  = <<-DESC
+                   sketchpadView.
                    DESC
 
-  s.homepage     = "http://EXAMPLE/MWSSketchpadView"
+  s.homepage     = "https://github.com/mws100/MWSSketchpadView"
   # s.screenshots  = "www.example.com/screenshots_1.gif", "www.example.com/screenshots_2.gif"
 
 
@@ -38,8 +39,8 @@ Pod::Spec.new do |s|
   #  Popular ones are 'MIT', 'BSD' and 'Apache License, Version 2.0'.
   #
 
-  s.license      = "MIT (example)"
-  # s.license      = { :type => "MIT", :file => "FILE_LICENSE" }
+  # s.license      = "MIT"
+  s.license      = { :type => "MIT", :file => "LICENSE" }
 
 
   # ――― Author Metadata  ――――――――――――――――――――――――――――――――――――――――――――――――――――――――― #
@@ -79,8 +80,8 @@ Pod::Spec.new do |s|
   #  Supports git, hg, bzr, svn and HTTP.
   #
 
-  s.source       = { :git => "http://EXAMPLE/MWSSketchpadView.git", :tag => "#{s.version}" }
-  s.require_arc = true
+  s.source       = { :git => "https://github.com/mws100/MWSSketchpadView.git", :tag => "#{s.version}" }
+  s.requires_arc = true
 
   # ――― Source Code ―――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――― #
   #
@@ -90,9 +91,7 @@ Pod::Spec.new do |s|
   #  Not including the public_header_files will make all headers public.
   #
 
-  s.source_files  = "MWSSketchpad"
-  
-  s.resources = ["MWSSketchpad/MWSSketchpad.bundle", "MWSSketchpad/MWSSketchpadView.xib"]  
+  s.source_files  = "MWSSketchpad/*.{h,m}"
 
   # s.public_header_files = "Classes/**/*.h"
 
@@ -106,8 +105,7 @@ Pod::Spec.new do |s|
   #
 
   # s.resource  = "icon.png"
-  # s.resources = "Resources/*.png"
-
+  s.resources = ["MWSSketchpad/MWSSketchpad.bundle", "MWSSketchpad/MWSSketchpadView.xib"]  
   # s.preserve_paths = "FilesToSave", "MoreFilesToSave"
 
 
@@ -117,7 +115,7 @@ Pod::Spec.new do |s|
   #  the lib prefix of their name.
   #
 
-  # s.framework  = "SomeFramework"
+   s.framework  = "UIKit"
   # s.frameworks = "SomeFramework", "AnotherFramework"
 
   # s.library   = "iconv"
@@ -130,7 +128,6 @@ Pod::Spec.new do |s|
   #  where they will only apply to your library. If you depend on other Podspecs
   #  you can include multiple dependencies to ensure it works.
 
-  # s.requires_arc = true
 
   # s.xcconfig = { "HEADER_SEARCH_PATHS" => "$(SDKROOT)/usr/include/libxml2" }
   # s.dependency "JSONKit", "~> 1.4"
