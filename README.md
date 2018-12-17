@@ -13,9 +13,9 @@
 
 ---
 ### 使用
-```
-#import "MWSSketchpadView.h"
+`#import "MWSSketchpadView.h"`
 
+```
 self.sketchpadView = [MWSSketchpadView shareInstance];
 //配置横向距离,一页代表屏幕的宽度，默认3页
 self.sketchpadView.horizontalPage = 5;
