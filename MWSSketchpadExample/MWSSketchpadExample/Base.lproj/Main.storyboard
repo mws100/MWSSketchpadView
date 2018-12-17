@@ -20,11 +20,55 @@
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3y5-D8-bIy">
+                                <rect key="frame" x="143.5" y="120" width="88" height="50"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="6Gy-1o-4IC"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="25"/>
+                                <state key="normal" title="草稿纸1"/>
+                                <connections>
+                                    <action selector="click1:" destination="BYZ-38-t0r" eventType="touchUpInside" id="XTv-e5-jfr"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="PzM-OI-iw3">
+                                <rect key="frame" x="141.5" y="300" width="92" height="50"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="mgz-XN-v3z"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="25"/>
+                                <state key="normal" title="草稿纸3"/>
+                                <connections>
+                                    <action selector="click3:" destination="BYZ-38-t0r" eventType="touchUpInside" id="ZxX-1g-m8Q"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rEF-GP-lFs">
+                                <rect key="frame" x="142" y="210" width="91" height="50"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="XuS-Ze-EYN"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="25"/>
+                                <state key="normal" title="草稿纸2"/>
+                                <connections>
+                                    <action selector="click2:" destination="BYZ-38-t0r" eventType="touchUpInside" id="EL6-Nc-9us"/>
+                                </connections>
+                            </button>
+                        </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="PzM-OI-iw3" firstAttribute="centerX" secondItem="rEF-GP-lFs" secondAttribute="centerX" id="0Su-zx-Biq"/>
+                            <constraint firstItem="3y5-D8-bIy" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="0uK-zv-AnN"/>
+                            <constraint firstItem="rEF-GP-lFs" firstAttribute="centerX" secondItem="3y5-D8-bIy" secondAttribute="centerX" id="oMo-r0-nB1"/>
+                            <constraint firstItem="PzM-OI-iw3" firstAttribute="top" secondItem="rEF-GP-lFs" secondAttribute="bottom" constant="40" id="qVQ-k8-Gkf"/>
+                            <constraint firstItem="3y5-D8-bIy" firstAttribute="top" secondItem="Cvm-H4-cMm" secondAttribute="bottom" constant="100" id="yLZ-pt-RmE"/>
+                            <constraint firstItem="rEF-GP-lFs" firstAttribute="top" secondItem="3y5-D8-bIy" secondAttribute="bottom" constant="40" id="zG4-eo-wo7"/>
+                        </constraints>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="140" y="106.59670164917542"/>
         </scene>
     </scenes>
 </document>

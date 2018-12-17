@@ -11,6 +11,8 @@
 
 @interface ViewController ()
 
+@property (nonatomic, strong) MWSSketchpadView *sketchpadView;
+
 @end
 
 @implementation ViewController
@@ -19,16 +21,23 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view, typically from a nib.
     
-    self.view.backgroundColor = [UIColor redColor];
+    self.view.backgroundColor = [UIColor cyanColor];
+    
+    self.sketchpadView = [MWSSketchpadView shareInstance];
+    self.sketchpadView.horizontalPage = 5;
+    self.sketchpadView.verticalPage = 5;
 }
 
-- (void)touchesBegan:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event {
-    [super touchesBegan:touches withEvent:event];
-    [[MWSSketchpadView shareInstance] showWithID:234];
-    
-    [MWSSketchpadView shareInstance].horizontalPage = 5;
-    [MWSSketchpadView shareInstance].verticalPage = 5;
+- (IBAction)click1:(UIButton *)sender {
+    [self.sketchpadView showWithID:123];
+}
 
+- (IBAction)click2:(UIButton *)sender {
+    [self.sketchpadView showWithID:1234];
+}
+
+- (IBAction)click3:(UIButton *)sender {
+    [self.sketchpadView showWithID:12345];
 }
 
 @end
