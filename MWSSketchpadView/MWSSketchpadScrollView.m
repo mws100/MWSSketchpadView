@@ -22,6 +22,8 @@
 
 - (instancetype)init {
     if (self = [super init]) {
+        _lineWidth = 3;
+        _lineStrokeColor = [UIColor blackColor];
         _pan = [[UIPanGestureRecognizer alloc] initWithTarget:self action:@selector(pan:)];
         _pan.maximumNumberOfTouches = 1;
         [self addGestureRecognizer:_pan];
@@ -63,7 +65,7 @@
     CGPoint curLocation = [pan locationInView:self];
     if (pan.state == UIGestureRecognizerStateBegan) {
         UIBezierPath *path = [[UIBezierPath alloc] init];
-        [path setLineWidth:3];
+        [path setLineWidth:self.lineWidth];
         [path setLineCapStyle:kCGLineCapRound];
         [path moveToPoint:curLocation];
         self.path = path;
@@ -80,7 +82,11 @@
 }
 
 - (void)drawRect:(CGRect)rect {
+    
+    CGContextSetStrokeColorWithColor(UIGraphicsGetCurrentContext(), self.lineStrokeColor.CGColor);
+    
     for (UIBezierPath *path in self.allPathsArray) {
+        [path setLineWidth:self.lineWidth];
         [path stroke];
     }
     if (self.pathsChangeHandle) {

@@ -28,13 +28,15 @@ static const CGFloat animationDuration = 0.25;
 @property (nonatomic, assign) NSInteger ID;
 /** 导航视图的高度 */
 @property (weak, nonatomic) IBOutlet NSLayoutConstraint *topViewHeight;
+/** 存储原来的StatusBarStyle */
+@property (nonatomic, assign) UIStatusBarStyle originalStatusBarStyle;
 
 @end
 
 @implementation MWSSketchpadView
 
 + (instancetype)shareInstance {
-    static id obj = nil;
+    static MWSSketchpadView *obj = nil;
     static dispatch_once_t onceToken;
     dispatch_once(&onceToken, ^{
         obj = [MWSSketchpadView sketchpadView];
@@ -44,6 +46,22 @@ static const CGFloat animationDuration = 0.25;
 
 + (instancetype)sketchpadView {
     return [[[NSBundle mainBundle] loadNibNamed:NSStringFromClass([self class]) owner:nil options:nil] lastObject];
+}
+
+- (void)setLineWidth:(CGFloat)lineWidth lineStrokeColor:(UIColor *)lineStrokeColor autoChangeStatusBarStyle:(BOOL)autoChangeStatusBarStyle {
+    self.lineWidth = lineWidth;
+    self.lineStrokeColor = lineStrokeColor;
+    self.autoChangeStatusBarStyle = autoChangeStatusBarStyle;
+}
+
+- (void)setLineWidth:(CGFloat)lineWidth {
+    _lineWidth = lineWidth;
+    self.scrollView.lineWidth = lineWidth;
+}
+
+- (void)setLineStrokeColor:(UIColor *)lineStrokeColor {
+    _lineStrokeColor = lineStrokeColor;
+    self.scrollView.lineStrokeColor = lineStrokeColor;
 }
 
 - (void)awakeFromNib {
@@ -120,6 +138,13 @@ static const CGFloat animationDuration = 0.25;
     } completion:^(BOOL finished) {
         
     }];
+    
+    if (self.autoChangeStatusBarStyle) {
+        self.originalStatusBarStyle = [UIApplication sharedApplication].statusBarStyle;
+        if (self.originalStatusBarStyle == UIStatusBarStyleLightContent) {
+            [[UIApplication sharedApplication] setStatusBarStyle:UIStatusBarStyleDefault animated:YES];
+        }
+    }
 }
 
 - (void)disappear {
@@ -140,6 +165,12 @@ static const CGFloat animationDuration = 0.25;
     } completion:^(BOOL finished) {
         [self removeFromSuperview];
     }];
+    
+    if (self.autoChangeStatusBarStyle) {
+        if ([UIApplication sharedApplication].statusBarStyle == UIStatusBarStyleDefault && self.originalStatusBarStyle == UIStatusBarStyleLightContent) {
+            [[UIApplication sharedApplication] setStatusBarStyle:UIStatusBarStyleLightContent animated:YES];
+        }
+    }
 }
 
 #pragma mark - lazy loading

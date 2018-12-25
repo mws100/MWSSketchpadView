@@ -29,4 +29,9 @@
 /** 保存已经撤销的路径 */
 @property (nonatomic, strong, readonly) NSMutableArray *undoPathsArray;
 
+/** 线的颜色, 默认:#000000*/
+@property (nonatomic, strong) UIColor *lineStrokeColor;
+/** 线的宽度, 默认:3point */
+@property (nonatomic, assign) CGFloat lineWidth;
+
 @end

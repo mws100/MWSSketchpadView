@@ -24,19 +24,23 @@
     self.view.backgroundColor = [UIColor cyanColor];
     
     self.sketchpadView = [MWSSketchpadView shareInstance];
+    self.sketchpadView.autoChangeStatusBarStyle = YES;
     self.sketchpadView.horizontalPage = 5;
     self.sketchpadView.verticalPage = 5;
 }
 
 - (IBAction)click1:(UIButton *)sender {
+    self.sketchpadView.lineStrokeColor = [UIColor magentaColor];
     [self.sketchpadView showWithID:123];
 }
 
 - (IBAction)click2:(UIButton *)sender {
+    self.sketchpadView.lineStrokeColor = [UIColor orangeColor];
     [self.sketchpadView showWithID:1234];
 }
 
 - (IBAction)click3:(UIButton *)sender {
+    self.sketchpadView.lineStrokeColor = [UIColor yellowColor];
     [self.sketchpadView showWithID:12345];
 }
 
