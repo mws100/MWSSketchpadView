@@ -7,10 +7,19 @@
 
 #import "MWSSketchpadScrollView.h"
 
+static CGPoint MidPoint(CGPoint p0, CGPoint p1) {
+    return (CGPoint) {
+        (p0.x + p1.x) / 2.0,
+        (p0.y + p1.y) / 2.0
+    };
+}
+
 @interface MWSSketchpadScrollView()
 
 @property (nonatomic, strong) UIPanGestureRecognizer *pan;
 @property (nonatomic, strong) UIBezierPath *path;
+/** 上一个触摸点 */
+@property (nonatomic, assign) CGPoint previousPoint;
 /** 当前在显示的路径 */
 @property (nonatomic, strong) NSMutableArray *allPathsArray;
 /** 保存已经撤销的路径 */
@@ -64,6 +73,7 @@
 - (void)pan:(UIPanGestureRecognizer *)pan {
     CGPoint curLocation = [pan locationInView:self];
     if (pan.state == UIGestureRecognizerStateBegan) {
+        self.previousPoint = curLocation;
         UIBezierPath *path = [[UIBezierPath alloc] init];
         [path setLineWidth:self.lineWidth];
         [path setLineCapStyle:kCGLineCapRound];
@@ -71,9 +81,11 @@
         self.path = path;
         [self.allPathsArray addObject:path];
     } else if (pan.state == UIGestureRecognizerStateChanged) {
-        [self.path addLineToPoint:curLocation];
+        CGPoint midPoint = MidPoint(self.previousPoint, curLocation);
+        [self.path addQuadCurveToPoint:midPoint controlPoint:self.previousPoint];
         [self setNeedsDisplay];
     }
+    self.previousPoint = curLocation;
 }
 
 - (void)setContentOffset:(CGPoint)contentOffset {
