@@ -82,8 +82,8 @@ static const CGFloat animationDuration = 0.25;
 - (void)layoutSubviews {
     [super layoutSubviews];
     self.scrollView.frame = CGRectMake(0, CGRectGetMaxY(self.topView.frame), self.bounds.size.width, self.bounds.size.height-CGRectGetHeight(self.topView.frame));
-    _horizontalPage = _horizontalPage > 0 ? : 3;
-    _verticalPage = _verticalPage > 0 ? : 3;
+    _horizontalPage = _horizontalPage > 0 ? _horizontalPage : 3;
+    _verticalPage = _verticalPage > 0 ? _verticalPage : 3;
 
     self.scrollView.contentSize = CGSizeMake(self.bounds.size.width*_horizontalPage, self.bounds.size.height*_verticalPage);
 }
@@ -170,6 +170,10 @@ static const CGFloat animationDuration = 0.25;
         if ([UIApplication sharedApplication].statusBarStyle == UIStatusBarStyleDefault && self.originalStatusBarStyle == UIStatusBarStyleLightContent) {
             [[UIApplication sharedApplication] setStatusBarStyle:UIStatusBarStyleLightContent animated:YES];
         }
+    }
+    
+    if (self.dispearHandler) {
+        self.dispearHandler();
     }
 }
 

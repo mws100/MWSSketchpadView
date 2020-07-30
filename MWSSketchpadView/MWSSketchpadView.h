@@ -7,6 +7,8 @@
 
 #import <UIKit/UIKit.h>
 
+typedef void(^MWSSketchpadViewDispearHandler)(void);
+
 @interface MWSSketchpadView : UIView
 
 /** 单例 */
@@ -22,7 +24,6 @@
 /** 加载这个id的缓存, id不能是0 */
 - (void)showWithID:(NSInteger)ID;
 
-
 - (void)setLineWidth:(CGFloat)lineWidth lineStrokeColor:(UIColor *)lineStrokeColor autoChangeStatusBarStyle:(BOOL)autoChangeStatusBarStyle;
 /** 线的宽度, 默认:3point */
 @property (nonatomic, assign) CGFloat lineWidth;
@@ -30,5 +31,8 @@
 @property (nonatomic, strong) UIColor *lineStrokeColor;
 /** 是否自动改变StatusBarStyle, 默认:NO */
 @property (nonatomic, assign) BOOL autoChangeStatusBarStyle;
+
+/** 视图消失的回调 */
+@property (nonatomic, copy) MWSSketchpadViewDispearHandler dispearHandler;
 
 @end
